@@ -1,0 +1,315 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Segoe UI', sans-serif;
+  background: linear-gradient(to top, #fff0f5, #ffe4e1);
+  overflow: hidden;
+  height: 100vh;
+  color: #7b2c39;
+  text-align: center;
+  position: relative;
+}
+
+.content {
+  position: relative;
+  top: 15vh;
+  padding: 24px 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.45);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 rgba(224,85,136,0.10);
+  backdrop-filter: blur(2px);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #e05588;
+  text-shadow: 0 0 10px #fff0f5, 0 0 20px #f27ba1;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f27ba1;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  background-color: #e05588;
+  transform: scale(1.07) rotate(-2deg);
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: scale(1.07) rotate(-2deg) translateX(0); }
+  25% { transform: scale(1.07) rotate(-2deg) translateX(-3px);}
+  50% { transform: scale(1.07) rotate(-2deg) translateX(3px);}
+  75% { transform: scale(1.07) rotate(-2deg) translateX(-2px);}
+  100% { transform: scale(1.07) rotate(-2deg) translateX(0);}
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  font-style: italic;
+  color: #444;
+}
+
+/* Falling Flower */
+.flower {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://i.ibb.co/5xprbZm/petal.png');
+  background-size: cover;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Hati Terbang */
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('https://i.ibb.co/5rJGbbn/heart.png') no-repeat center;
+  background-size: contain;
+  animation: flyUp linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Popup Surat Cinta */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 182, 193, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1.3em;
+  color: #7b2c39;
+  position: relative;
+  font-family: 'Great Vibes', cursive;
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.popup-content:active {
+  box-shadow: 0 0 24px #f27ba1;
+  transform: scale(1.02);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+/* Bunga Mekar Acak */
+.bloom-flower {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  animation: bloomAnimation 4s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes bloomAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Fade-in Message */
+.fade-in-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 240, 245, 0.97);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: fadeInOut 3s 1;
+  animation-fill-mode: forwards;
+  font-family: 'Great Vibes', cursive;
+  color: #e05588;
+  font-size: 1.5em;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Judul Romantis */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #e05588;
+  text-shadow: 0 0 10px #fff0f5, 0 0 20px #f27ba1;
+  letter-spacing: 2px;
+}
+
+/* Popup Animasi */
+.animated-popup {
+  animation: popupAppear 0.7s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+@keyframes popupAppear {
+  0% {
+    transform: scale(0.7) rotate(-10deg);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Surat Cinta Font */
+.popup-content {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3em;
+  /* ...existing code... */
+}
+
+.random-quote {
+  margin-top: 18px;
+  font-size: 1.1em;
+  color: #e05588;
+  font-style: italic;
+  min-height: 32px;
+  transition: opacity 0.5s;
+}
+
+/* Mini Popup */
+.mini-popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,240,245,0.98);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px #e0558855;
+  padding: 24px 36px;
+  z-index: 2000;
+  min-width: 220px;
+  max-width: 80vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+.mini-popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mini-popup-content {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3em;
+  color: #e05588;
+  text-align: center;
+  position: relative;
+}
+.mini-close-btn {
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #e05588;
+  font-family: Arial, sans-serif;
+  opacity: 0.7;
+}
+.mini-close-btn:hover {
+  opacity: 1;
+}

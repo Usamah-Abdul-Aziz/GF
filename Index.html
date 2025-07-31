@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy GF Day, Sayang 🌸</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Pesan Fade-in -->
+  <div class="fade-in-message" id="fade-in-message">
+    <h2>Happy International Girlfrien day honey💖</h2>
+    <p>Scroll perlahan, ada kejutan untukmu...</p>
+  </div>
+
+  <!-- Bunga & Hati -->
+  <div class="flower-container" id="flower-container"></div>
+  <div class="heart-container" id="heart-container"></div>
+  <div id="bloom-container"></div>
+
+  <!-- Konten Utama -->
+  <div class="content">
+    <h1>Happy GF Day, Sayangg 🌷</h1>
+    <p>Terima kasih telah hadir dalam hidupku.</p>
+    <p>Kamu adalah bunga terindah yang mekar di hatiku.</p>
+    <p>Aku bersyukur setiap hari karena bisa menyayangimu 💗</p>
+    <p>Semoga hari ini seindah senyummu Honeyy.</p>
+    <blockquote style="font-style:italic; color:#e05588; margin:18px 0;">
+      "Cinta itu seperti bunga, ia tumbuh indah karena dirawat dengan hati."
+    </blockquote>
+    <p>
+      <span style="font-size:1.1em; color:#7b2c39;">
+        Semoga kebahagiaan selalu bermekaran di hidupmu, seperti bunga-bunga di taman hati kita.
+      </span>
+    </p>
+    <p>I love you 🌸</p>
+    <button onclick="showLoveLetter()">Dibuka dari hati 💖</button>
+    <div id="random-quote" class="random-quote"></div>
+  </div>
+
+  <!-- Popup Surat Cinta -->
+  <div id="letter-popup" class="popup hidden">
+    <div class="popup-content animated-popup" onclick="event.stopPropagation()">
+      <span class="close-btn" onclick="closeLoveLetter()">&times;</span>
+      <h2>Untuk Kamu...</h2>
+      <p>Sayangku,</p>
+      <p>Terima kasih telah menjadi tempatku kembali, rumah untuk segala lelahku.</p>
+      <p>Di setiap senyummu, aku temukan kedamaian yang tak pernah kutemukan di tempat lain.</p>
+      <p>Aku tidak tahu bagaimana masa depan kita, tapi aku tahu aku ingin melewatinya bersamamu.</p>
+      <p>Aku mencintaimu. Selalu.</p>
+      <p>— Kekasihmu 💌</p>
+    </div>
+  </div>
+
+  <!-- Popup Motivasi/Cinta Acak -->
+  <div id="mini-popup" class="mini-popup hidden">
+    <div class="mini-popup-content" onclick="event.stopPropagation()">
+      <span class="mini-close-btn" onclick="closeMiniPopup()">&times;</span>
+      <span id="mini-popup-text"></span>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio id="bg-music" autoplay loop>
+    <source src="Lagu.mp3" type="audio/mp3" />
+    Browsermu tidak mendukung audio.
+  </audio>
+
+  <footer>
+    ~ From someone who loves you deeply 💌<br>
+    <span style="font-size:12px; color:#aaa;">Made with love & flowers</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
